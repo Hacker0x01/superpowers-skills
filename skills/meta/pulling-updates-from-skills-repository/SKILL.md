@@ -2,7 +2,7 @@
 name: Pulling Updates from Skills Repository
 description: Sync local skills repository with upstream changes from obra/superpowers-skills
 when_to_use: when session start indicates new upstream skills available, or when manually updating to latest versions
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Updating Skills from Upstream
@@ -15,7 +15,7 @@ Pull and merge upstream changes from obra/superpowers-skills into your local ski
 
 ## Prerequisites
 
-Your skills repo must have an `upstream` remote pointing to obra/superpowers-skills. The plugin sets this up automatically.
+Your skills repo must have a tracking branch configured. The plugin sets this up automatically (either as a fork with `origin` remote, or with an `upstream` remote).
 
 ## The Process
 
@@ -39,32 +39,49 @@ git stash push -m "Temporary stash before upstream update"
 
 Record: Whether changes were stashed (you'll need to unstash later)
 
-### Step 3: Fetch Upstream Changes
+### Step 3: Determine Tracking Remote and Fetch
 
-Run:
+First, detect which remote to use:
 ```bash
-git fetch upstream
+TRACKING_REMOTE=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null | cut -d'/' -f1 || echo "")
 ```
 
-Expected: Fetches latest commits from obra/superpowers-skills
+Then fetch from the appropriate remote:
+```bash
+if [ -n "$TRACKING_REMOTE" ]; then
+    git fetch "$TRACKING_REMOTE" 2>/dev/null || true
+else
+    git fetch upstream 2>/dev/null || git fetch origin 2>/dev/null || true
+fi
+```
+
+Expected: Fetches latest commits from the tracking remote (or falls back to upstream/origin)
 
 ### Step 4: Check What's New
 
 Run:
 ```bash
-git log HEAD..upstream/main --oneline
+git log HEAD..@{u} --oneline
 ```
 
 Show user: List of new commits being pulled
 
-### Step 5: Merge Upstream Changes
+Note: `@{u}` refers to the upstream tracking branch for your current branch
 
-Run:
+### Step 5: Merge Changes
+
+First, try a fast-forward merge (cleanest option):
 ```bash
-git merge upstream/main
+git merge --ff-only @{u}
 ```
 
-**If merge succeeds cleanly:** Proceed to Step 6
+**If fast-forward succeeds:** Skip to Step 7 (no conflicts possible with fast-forward)
+**If fast-forward fails:** Your branch has diverged. Try regular merge:
+```bash
+git merge @{u}
+```
+
+**If merge succeeds cleanly:** Proceed to Step 7
 **If conflicts occur:** Proceed to conflict resolution
 
 ### Step 6: Handle Merge Conflicts (if any)
@@ -107,9 +124,11 @@ Tell user:
 
 **"Already up to date"**: Your local repo is current, no action needed
 
+**"fatal: no upstream configured"**: Your branch isn't tracking a remote branch. Check `git remote -v` to see available remotes, then set tracking with `git branch --set-upstream-to=<remote>/<branch>`
+
 **Detached HEAD**: You're not on a branch. Ask user if they want to create a branch or check out main.
 
-**No upstream remote**: Run `git remote add upstream https://github.com/obra/superpowers-skills.git`
+**Fast-forward fails, diverged branches**: Your local branch has commits that aren't in the remote. Regular merge will be needed, which may cause conflicts.
 
 ## Remember
 

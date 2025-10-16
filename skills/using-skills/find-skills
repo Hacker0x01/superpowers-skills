@@ -74,8 +74,8 @@ done < <(
     if [[ -n "$PATTERN" ]]; then
         # Pattern mode: search content and paths
         {
-            grep -E -r "$PATTERN" "$SKILLS_DIR/" --include="SKILL.md" -l 2>/dev/null || true
-            find "$SKILLS_DIR/" -name "SKILL.md" -type f 2>/dev/null | grep -E "$PATTERN" 2>/dev/null || true
+            grep -E -r -- "$PATTERN" "$SKILLS_DIR/" --include="SKILL.md" -l 2>/dev/null || true
+            find "$SKILLS_DIR/" -name "SKILL.md" -type f 2>/dev/null | grep -E -- "$PATTERN" 2>/dev/null || true
         } | sort -u
     else
         # Show all
