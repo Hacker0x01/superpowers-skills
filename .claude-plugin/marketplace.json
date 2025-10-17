@@ -1,0 +1,98 @@
+{
+  "name": "claude-power-user",
+  "owner": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "metadata": {
+    "description": "Comprehensive Claude Code skills marketplace: collaboration, testing, debugging, and more",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "collaboration-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/collaboration"
+      },
+      "description": "Collaboration skills: brainstorming, planning, code review, parallel agents, git workflows",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["collaboration", "brainstorming", "planning", "code-review", "workflows"],
+      "strict": true
+    },
+    {
+      "name": "testing-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/testing"
+      },
+      "description": "Testing skills: TDD, async patterns, testing anti-patterns",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["testing", "tdd", "test-driven-development", "async", "best-practices"],
+      "strict": true
+    },
+    {
+      "name": "debugging-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/debugging"
+      },
+      "description": "Debugging skills: systematic debugging, root cause tracing, verification, defense-in-depth",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["debugging", "root-cause", "verification", "systematic", "troubleshooting"],
+      "strict": true
+    },
+    {
+      "name": "meta-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/meta"
+      },
+      "description": "Meta skills: writing skills, testing skills, sharing contributions, maintaining skill repositories",
+      "version": "1.0.0",
+      "category": "meta",
+      "keywords": ["meta", "skills-development", "documentation", "contribution", "maintenance"],
+      "strict": true
+    },
+    {
+      "name": "problem-solving-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/problem-solving"
+      },
+      "description": "Problem-solving skills: thinking techniques, simplification, pattern recognition, inversion exercises",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["problem-solving", "thinking", "patterns", "simplification", "techniques"],
+      "strict": true
+    },
+    {
+      "name": "research-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/research"
+      },
+      "description": "Research skills: knowledge investigation, tracing lineages, information gathering",
+      "version": "1.0.0",
+      "category": "research",
+      "keywords": ["research", "investigation", "knowledge", "analysis"],
+      "strict": true
+    },
+    {
+      "name": "architecture-skills",
+      "source": {
+        "source": "local",
+        "path": "plugins/architecture"
+      },
+      "description": "Architecture skills: design patterns, productive tensions, system thinking",
+      "version": "1.0.0",
+      "category": "architecture",
+      "keywords": ["architecture", "design", "patterns", "system-design"],
+      "strict": true
+    }
+  ]
+}
+

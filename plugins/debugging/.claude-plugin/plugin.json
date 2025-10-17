@@ -1,0 +1,11 @@
+{
+  "name": "debugging-skills",
+  "description": "Debugging skills: systematic debugging, root cause tracing, verification, defense-in-depth",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["debugging", "root-cause", "verification", "systematic", "troubleshooting"]
+}

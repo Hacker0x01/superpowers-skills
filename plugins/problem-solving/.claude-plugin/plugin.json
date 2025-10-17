@@ -1,0 +1,11 @@
+{
+  "name": "problem-solving-skills",
+  "description": "Problem-solving skills: thinking techniques, simplification, pattern recognition, inversion exercises",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["problem-solving", "thinking", "patterns", "simplification", "techniques"]
+}
