@@ -1,0 +1,11 @@
+{
+  "name": "collaboration-skills",
+  "description": "Collaboration skills: brainstorming, planning, code review, parallel agents, git workflows",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["collaboration", "brainstorming", "planning", "code-review", "workflows"]
+}

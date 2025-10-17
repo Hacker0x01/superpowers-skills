@@ -1,0 +1,11 @@
+{
+  "name": "research-skills",
+  "description": "Research skills: knowledge investigation, tracing lineages, information gathering",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["research", "investigation", "knowledge", "analysis"]
+}
