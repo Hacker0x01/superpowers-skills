@@ -165,4 +165,4 @@ MIT License - see LICENSE file for details
 
 ## Credits
 
-Skills originally derived from the [superpowers](https://github.com/obra/superpowers) project by Jesse Vincent.
+Skills originally derived from the [superpowers](https://github.com/obra/superpowers) project by Jesse Vincent and forked from [Hacker0x01/claude-power-user](https://github.com/Hacker0x01/claude-power-user).

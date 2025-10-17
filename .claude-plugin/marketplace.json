@@ -11,10 +11,7 @@
   "plugins": [
     {
       "name": "collaboration-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/collaboration"
-      },
+      "source": "plugins/collaboration",
       "description": "Collaboration skills: brainstorming, planning, code review, parallel agents, git workflows",
       "version": "1.0.0",
       "category": "productivity",
@@ -23,10 +20,7 @@
     },
     {
       "name": "testing-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/testing"
-      },
+      "source": "plugins/testing",
       "description": "Testing skills: TDD, async patterns, testing anti-patterns",
       "version": "1.0.0",
       "category": "development",
@@ -35,10 +29,7 @@
     },
     {
       "name": "debugging-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/debugging"
-      },
+      "source": "plugins/debugging",
       "description": "Debugging skills: systematic debugging, root cause tracing, verification, defense-in-depth",
       "version": "1.0.0",
       "category": "development",
@@ -47,10 +38,7 @@
     },
     {
       "name": "meta-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/meta"
-      },
+      "source": "plugins/meta",
       "description": "Meta skills: writing skills, testing skills, sharing contributions, maintaining skill repositories",
       "version": "1.0.0",
       "category": "meta",
@@ -59,10 +47,7 @@
     },
     {
       "name": "problem-solving-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/problem-solving"
-      },
+      "source": "plugins/problem-solving",
       "description": "Problem-solving skills: thinking techniques, simplification, pattern recognition, inversion exercises",
       "version": "1.0.0",
       "category": "productivity",
@@ -71,10 +56,7 @@
     },
     {
       "name": "research-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/research"
-      },
+      "source": "plugins/research",
       "description": "Research skills: knowledge investigation, tracing lineages, information gathering",
       "version": "1.0.0",
       "category": "research",
@@ -83,10 +65,7 @@
     },
     {
       "name": "architecture-skills",
-      "source": {
-        "source": "local",
-        "path": "plugins/architecture"
-      },
+      "source": "plugins/architecture",
       "description": "Architecture skills: design patterns, productive tensions, system thinking",
       "version": "1.0.0",
       "category": "architecture",
