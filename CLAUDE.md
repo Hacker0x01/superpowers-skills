@@ -43,6 +43,24 @@ The marketplace is defined in `.claude-plugin/marketplace.json` which:
 - Allows users to selectively install skill categories: `/plugin install [category]-skills@claude-power-user`
 - Each plugin entry has `"strict": true` to enforce exact skill matching
 
+#### Pack-Based Installation
+
+The marketplace includes a `packs` section that groups plugins by role for easier installation:
+
+- **universal**: Essential skills for all users (collaboration, problem-solving, research)
+- **developer**: Developer-focused skills (testing, debugging, architecture)
+- **power-user**: Meta skills for customization and extension
+- **complete**: All available skills
+
+Each pack includes:
+- `name`: Display name for the pack
+- `description`: What the pack provides and who it's for
+- `roles`: Array of role tags this pack is designed for
+- `plugins`: Array of plugin names included in the pack
+- `install_command`: Complete command to install all plugins in the pack
+
+Note: Claude Code doesn't have native pack support, so installation requires running the full command with multiple plugin installs chained with `&&`.
+
 ### Skills System
 
 Skills are specialized instructions that guide Claude Code through specific workflows:
