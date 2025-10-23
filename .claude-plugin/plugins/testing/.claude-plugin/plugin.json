@@ -1,0 +1,11 @@
+{
+  "name": "testing-skills",
+  "description": "Testing skills: TDD, async patterns, testing anti-patterns",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["testing", "tdd", "test-driven-development", "async", "best-practices"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "architecture-skills",
+  "description": "Architecture skills: design patterns, productive tensions, system thinking",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Caughman",
+    "email": "mcaughman@hackerone.com"
+  },
+  "license": "MIT",
+  "keywords": ["architecture", "design", "patterns", "system-design"]
+}
