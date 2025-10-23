@@ -11,7 +11,7 @@ This marketplace provides a collection of specialized skills plugins for Claude 
 ### Add the Marketplace
 
 ```bash
-/plugin marketplace add mcaughman/claude-power-user
+/plugin marketplace add Hacker0x01/claude-power-user
 ```
 
 ### Install Individual Plugins
