@@ -14,9 +14,49 @@ This marketplace provides a collection of specialized skills plugins for Claude 
 /plugin marketplace add Hacker0x01/claude-power-user
 ```
 
+### Install by Role Pack (Recommended)
+
+Choose the pack that matches your role for a curated selection of skills:
+
+#### Universal Pack (All Users)
+Essential skills for collaboration, problem-solving, and research - perfect for non-technical users, managers, and researchers.
+
+```bash
+/plugin install collaboration-skills@claude-power-user && /plugin install problem-solving-skills@claude-power-user && /plugin install research-skills@claude-power-user
+```
+
+**Includes:** collaboration-skills, problem-solving-skills, research-skills
+
+#### Developer Pack
+Developer-focused skills for testing, debugging, and architecture - ideal for engineers and tech leads.
+
+```bash
+/plugin install testing-skills@claude-power-user && /plugin install debugging-skills@claude-power-user && /plugin install architecture-skills@claude-power-user
+```
+
+**Includes:** testing-skills, debugging-skills, architecture-skills
+
+#### Power User Pack
+Meta skills for customizing Claude Code and creating your own skills - for admins and power users.
+
+```bash
+/plugin install meta-skills@claude-power-user
+```
+
+**Includes:** meta-skills
+
+#### Complete Pack (Everything)
+Install all available skills for the full claude-power-user experience.
+
+```bash
+/plugin install collaboration-skills@claude-power-user && /plugin install testing-skills@claude-power-user && /plugin install debugging-skills@claude-power-user && /plugin install meta-skills@claude-power-user && /plugin install problem-solving-skills@claude-power-user && /plugin install research-skills@claude-power-user && /plugin install architecture-skills@claude-power-user
+```
+
+**Includes:** All 7 skill plugins
+
 ### Install Individual Plugins
 
-Install only the skill categories you need:
+You can also install only the specific skill categories you need:
 
 ```bash
 # Collaboration skills
@@ -39,12 +79,6 @@ Install only the skill categories you need:
 
 # Architecture skills
 /plugin install architecture-skills@claude-power-user
-```
-
-### Install All Plugins
-
-```bash
-/plugin install collaboration-skills@claude-power-user testing-skills@claude-power-user debugging-skills@claude-power-user problem-solving-skills@claude-power-user meta-skills@claude-power-user research-skills@claude-power-user architecture-skills@claude-power-user
 ```
 
 ## Available Plugins
@@ -165,4 +199,4 @@ MIT License - see LICENSE file for details
 
 ## Credits
 
-Skills originally derived from the [superpowers](https://github.com/obra/superpowers) project by Jesse Vincent.
+Skills originally derived from the [superpowers](https://github.com/obra/superpowers) project by Jesse Vincent and forked from [Hacker0x01/claude-power-user](https://github.com/Hacker0x01/claude-power-user).
